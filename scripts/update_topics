@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+
+# Use GitHub’s GraphQL API to get repository and their topics.
+if ARGV.include? '-u'
+  system "mkdir -p generated"
+  system %q{gh api graphql --paginate -f query='query($endCursor: String) {
+    viewer {
+      repositories(affiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER], orderBy: {field: UPDATED_AT, direction: DESC}, first: 100, after: $endCursor) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          nameWithOwner
+          repositoryTopics(first: 10) {
+            nodes {
+              topic {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }' | tee generated/topics.json}
+end
+
+require 'json'
+require 'yaml'
+
+topics = {}
+data = YAML.load_file('topics.yml')
+unfamiliar_topics = data.delete('_Unfamiliar')
+unrelated_topics = data.delete('_Unrelated')
+covered_topics = data.values.flatten | unfamiliar_topics.values.flatten | unrelated_topics
+missing_topics = covered_topics.reject { |t| t =~ /\./ }
+
+File.read('generated/topics.json').split('{"data":{').each do |c|
+  next if c.empty?
+  c = '{"data":{' + c unless c.start_with? '{"data":{'
+  page = JSON.parse(c)
+  page['data']['viewer']['repositories']['nodes'].each do |repo|
+    repo_name = repo['nameWithOwner']
+    topic_names = repo['repositoryTopics']['nodes'].map { |t| t['topic']['name'] }
+    topic_names.each do |topic|
+      topics[topic] ||= []
+      topics[topic] << repo_name
+      missing_topics -= [topic]
+    end
+  end
+end
+
+topics.sort.each do |topic, repos|
+  if !covered_topics.include?(topic)
+    puts "\e[1;33m#{topic}\e[m (#{repos.size}): #{repos.inspect}"
+  end
+end
+
+puts
+puts "Topic with no matching repo:"
+pp missing_topics

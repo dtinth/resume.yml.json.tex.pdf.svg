@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'erb'
+require 'yaml'
+
+data = YAML.load_file('resume.yml')
+tex_template = File.read('resume.tex.erb')
+topics = YAML.load_file('topics.yml')
+tex = ERB.new(tex_template).result(binding)
+system "mkdir -p generated"
+File.write('generated/resume.tex', tex)
+system "cd generated && latexmk -xelatex resume.tex"

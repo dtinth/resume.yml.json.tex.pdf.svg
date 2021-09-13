@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+onchange -i '*.tex.erb' '*.yml' -- ./scripts/generate

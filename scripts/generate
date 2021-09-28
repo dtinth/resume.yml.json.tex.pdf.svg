@@ -10,3 +10,4 @@ tex = ERB.new(tex_template).result(binding)
 system "mkdir -p generated"
 File.write('generated/resume.tex', tex)
 system "cd generated && latexmk -xelatex resume.tex"
+system "pdf-to-svg generated/resume.pdf"

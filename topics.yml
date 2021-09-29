@@ -53,13 +53,13 @@ getUserMedia API: [getusermedia]
 Git: [git]
 GitHub Actions: [github-actions]
 GitHub API: [github-api]
+GitHub CLI: [github-cli]
 GitHub Codespaces: [codespaces]
 GitHub Pages: [github-pages]
 GitHub Packages: [github-packages]
 Glitch.com: [glitch, https://glitch.com/@dtinth]
 Google APIs: [gapi]
 Google Artifact Registry: [gke, cloud-run]
-Google Cloud IoT Core: [cloud-iot-core]
 Google Cloud Run: [cloud-run]
 Google Cloud Speech API: [cloud-speech-api]
 Google Cloud Storage: [gcs]
@@ -169,6 +169,7 @@ _Unrelated:
   - audience-engagement
   - backend
   - bdd
+  - bindgen
   - catalina
   - chatbot
   - chiptune-synthesizer
@@ -195,13 +196,17 @@ _Unrelated:
   - musical-instrument
   - nes
   - novnc
+  - pkg
   - poll
   - portfolio
   - promptpay-qr
+  - raspbian
   - readthedocs
   - questions-and-answers
   - quiz
+  - sfspeechrecognizer
   - song
+  - tsv
   - typing-game
   - udp
   - wiki
@@ -215,7 +220,7 @@ _Unfamiliar:
   AppleScript: [applescript]
   Applitools: [applitools]
   Atom: [atom]
-  AudioWorklet: [audio-worklet]
+  AudioWorklet: [audio-worklet, audioworklet]
   AutoIt: [autoit]
   AutoPy: [autopy]
   Batch Script: [batch-script]
@@ -224,18 +229,21 @@ _Unfamiliar:
   C: [c]
   C++: [cpp]
   Caddy Server: [caddy]
+  Chrome DevTools Protocol: [chrome-devtools-protocol]
   ClojureScript: [clojurescript]
   Cloudflare Workers: [cloudflare-workers]
   Cocoa: [cocoa]
   CodeMirror: [codemirror]
   Docsify: [docsify]
   Docusaurus: [docusaurus]
+  Ext JS: [extjs]
   Fastify: [fastify]
   Firefox Extension API: [firefox-extension]
   Flutter: [flutter]
   FMOD: [fmod]
   Gauge: [gauge]
   Google App Engine: [google-app-engine]
+  Google Cloud IoT Core: [cloud-iot-core]
   GLSL: [glsl]
   GraphQL: [graphql]
   Hammerspoon: [hammerspoon]
@@ -252,6 +260,8 @@ _Unfamiliar:
   libsndfile: [libsndfile]
   Lua: [lua]
   Metalsmith: [metalsmith]
+  MooTools: [mootools]
+  MQTT: [mqtt]
   Music Theory: [music-theory]
   OAuth 1.0a: [oauth1a]
   Objective-C: [objective-c]
@@ -268,6 +278,7 @@ _Unfamiliar:
   RefluxJS: [refluxjs]
   remark: [remark]
   RequireJS: [requirejs]
+  RtMidi: [rtmidi]
   Rust: [rust]
   Serde: [serde]
   SonarCloud: [sonarcloud]

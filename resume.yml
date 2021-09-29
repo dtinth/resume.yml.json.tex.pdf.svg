@@ -44,20 +44,28 @@ education:
     startDate: 2011-06-17
     endDate: 2015-05-31
 projects:
-  - name: React Bangkok
+  - name: Zone-IT (2006 – 2010)
+    type: community
+    description: A web forum about all things IT, with over 100 categories, 100,000 users and 500,000 posts. I was part of the administrator team, and I mainly helped with technical aspects of the project.
+    highlights:
+      - 'Heavily modified the Simple Machines Forum (PHP+MySQL) to add features which set it apart from other forums: implementing a chat system, custom BBCode tags, radio station system, portal pages, and other features, using XMLHttpRequest and MooTools heavily.'
+      - Designed 3 major iterations of the forum look and feel. Added various microinteractions and animations to the forum. (CSS animations and transitions didn’t exist back then; we used MooTools.Fx.)
+      - Optimized the forum’s code, added layers of caching, and tuned the system and database performance to be able to serve over 700 simultaneous users.
+      - Performed archive tasks to convert old posts into static HTML pages, in order to reduce the load on the server.
+  - name: React Bangkok (2016 – 2019)
     type: community
     description: A series of meetups and conferences focused on React.
     highlights:
-      - 'Gave a few talks: \href{https://dt.in.th/higher-order-components-and-recompose-talk.html}{“HOCs and Recompose”}, \href{https://dt.in.th/reactbkk2-live-coding.html}{“Live coding and mob programming session”}'
-      - Helped in organizing the events, mainly tasks that require coding.
-  - name: JavaScript Bangkok
+      - 'Gave a few talks: \href{https://dt.in.th/higher-order-components-and-recompose-talk.html}{“HOCs and Recompose”} and \href{https://dt.in.th/reactbkk2-live-coding.html}{“Live coding and mob programming session”}'
+      - 'Helped in organizing the events, mainly tasks that require coding: working on event websites, GitHub issue bot, custom ticket check-in systems, name tag generation system, and live Twitter board.'
+  - name: JavaScript Bangkok (2020)
     type: community
     description: An international conference about JavaScript.
     highlights:
       - Helped in architecting and remotely collaborating on the conference website using Figma and CodeSandbox. The process of building the website is livestreamed and I posted a video to document our \href{https://youtu.be/watch?v=uQH2R-BE1lw}{synchronous remote collaboration} on YouTube.
       - Implemented lunchtime meal reservation system using Firebase, ensuring that the system can handle 800 people reserving their meal at the same time, keeping all data consistent.
       - Live-translated Thai talks into English during the event.
-  - name: The Stupid Hackathon Thailand
+  - name: The Stupid Hackathon Thailand (2017 – 2021)
     type: community
     description: 'A series of hackathons to encourage people to just have fun building stuff. It’s one of the funniest hackathons in Thailand. Helped in organizing the 1st to 4th hackathons. For the 5th hackathon, I was a consultant for the organizing team.'
     highlights:
@@ -68,21 +76,21 @@ projects:
       - Went virtual due to COVID-19. Set up virtual spaces and planned out activities during the hackathon (4th).
       - Helped in organizing other events by the same team, such as Hacktoberfest Bangkok meetup 2020 and BKK.JS \#14.
       - 'Made a few projects myself: \href{https://dt.in.th/bangkokipsum.html}{Bangkok Ipsum}, \href{https://dt.in.th/midi-light-switch.html}{MIDI Light Switch} and \href{https://www.youtube.com/watch?v=2JE3DETHTQo}{Misheard}.'
-  - name: Code in the Dark Thailand
+  - name: Code in the Dark Thailand (2018 – 2019)
     type: community
     description: An challenging frontend contest event by Tictail. For more info see \href{http://codeinthedark.com/}{codeinthedark.com}. Being an open-sourced event, I helped bringing it to Thailand. We ran 3 events in Bangkok and Chiang Mai.
     highlights:
       - Came up with web design implementation challenges for the participants (1st, 2nd).
       - Devised simple challenges that one has to solve in order to get a ticket to the hackathon due to high interest but limited venue capacity (1st).
       - Came up with a frontend quiz for the audience. The quiz result is used to select who would become a contestant. This replaced the first-come-first-served sign-up system which I believe prefers confidence over skills (3rd).
-  - name: ELECT LIVE
+  - name: ELECT LIVE (2019)
     type: community
     description: An open-source website by the ELECT.in.th initiative that shows the live results of 2019 Thailand Election. I volunteered as a frontend architect.
     highlights:
       - Helped in building the technical architecture of the website using React, Gatsby, Emotion and MobX. The architecture provided tools for developers to inspect the application state and raw data from within the app, allowing for easier debugging.
       - Used the \href{https://www.yegor256.com/2010/03/04/pdd.html}{Puzzle-Driven Development} methodology to break down programming tasks into smaller and easier tasks which can be independently worked on. This eventually allowed over 20 people to contribute to the website, closing over 100 issues in just 8 days.
       - Documented our learnings in \href{https://wonderful.software/elect-live/}{ELECT LIVE development notes} (Thai) and on the \github{electinth/election-live} repository’s README file (English).
-  - name: wonderful.software Webring
+  - name: wonderful.software Webring (2021)
     type: community
     description: A webring for Thai developers, designers, and artists. Each site in the ring links to the main webring site. The webring then takes the visitor to the next site in the ring, allowing traffic to flow between members’ sites. See \href{https://webring.wonderful.software/}{webring.wonderful.software}.
     highlights:
@@ -91,7 +99,7 @@ projects:
       - Created a semi-automated PR review workflow using GitHub Actions. It automatically visits the website and checks for a valid backlink, saving me time when reviewing PRs.
       - Set up automation to continually update the website screenshots in the webring using Puppeteer.
       - Set up system to collect and publish webring usage stats using Amplitude, Google Cloud Functions, and GitHub Actions.
-  - name: Clubhouse Music Jamming Room
+  - name: Clubhouse Music Jamming Room (2021)
     type: community
     description: A community of people who like to jam together online using the open-source \href{https://jamulus.io/}{Jamulus} software. We used Clubhouse to broadcast our jam sessions live and find new members.
     highlights:
@@ -100,11 +108,11 @@ projects:
       - Set up server monitoring using Azure Monitor.
       - Evaluated cloud service provider performance by signing up for a bunch of cloud services and putting them through a series of benchmarks (audio encoding test, packet delay variation (jitter) test). The results would then be analyzed to find out which cloud service provider provides the best service with reasonable price.
       - Contributed a patch to introduce \href{https://github.com/jamulussoftware/jamulus/pull/1975}{JSON-RPC} to the Jamulus project as a way to programmatically control the Jamulus servers and clients.
-  - name: Personal digital infrastructure project
+  - name: Personal digital infrastructure project (2018 – Present)
     type: personal
     description: A personal project to build tools that lets me be more lazy.
     highlights:
-      - 'Created a serverless rapid prototyping platform on Google Cloud Run \github{dtinth/evalaas}. It lets me prototype and make changes to the chat bot and see the results immediately, without having to go through a full deployment cycle.'
+      - 'Created a serverless rapid prototyping platform on Google Cloud Run: \github{dtinth/evalaas}. It lets me prototype and make changes to the chat bot and see the results immediately, without having to go through a full Google Cloud Run service deployment cycle (which takes minutes).'
       - 'Set up a multi-channel chat bot (LINE, Slack, CLI) that automates my home, tracks my expenses, lets me take notes, and make quick calculations: \github{dtinth/automatron}.'
       - 'Built an Android app to send notifications from my phone to automatron, so that financial transactions can be automatically tracked: \github{dtinth/dtinth.tools-android}.'
       - 'Set up an automated script to periodically take screenshots of my web projects: \github{dtinth/timelapse}.'

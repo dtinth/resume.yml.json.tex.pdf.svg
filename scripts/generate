@@ -5,7 +5,6 @@ require 'yaml'
 require 'json'
 
 data = YAML.load_file('resume.yml')
-File.write('generated/resume.json', JSON.pretty_generate(data))
 tex_template = File.read('resume.tex.erb')
 topics = YAML.load_file('topics.yml')
 tex = ERB.new(tex_template).result(binding)
@@ -13,3 +12,4 @@ system "mkdir -p generated"
 File.write('generated/resume.tex', tex)
 system "cd generated && latexmk -xelatex resume.tex"
 system "pdf-to-svg generated/resume.pdf"
+File.write('generated/resume.json', JSON.pretty_generate(data))

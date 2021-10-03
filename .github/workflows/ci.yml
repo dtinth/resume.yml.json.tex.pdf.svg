@@ -19,6 +19,7 @@ jobs:
           rm -rf out
           mkdir -p out
           cp {generated,out}/resume.tex
+          cp {generated,out}/resume.json
           cp {generated,out}/resume.pdf
           cp {generated,out}/resume.svg
       - name: Update files

@@ -2,8 +2,10 @@
 
 require 'erb'
 require 'yaml'
+require 'json'
 
 data = YAML.load_file('resume.yml')
+File.write('generate/resume.json', JSON.pretty_generate(data))
 tex_template = File.read('resume.tex.erb')
 topics = YAML.load_file('topics.yml')
 tex = ERB.new(tex_template).result(binding)
